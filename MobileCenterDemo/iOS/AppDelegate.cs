@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using Microsoft.Azure.Mobile;
 using UIKit;
 
 namespace MobileCenterDemo.iOS
@@ -18,6 +19,8 @@ namespace MobileCenterDemo.iOS
 #if ENABLE_TEST_CLOUD
 			Xamarin.Calabash.Start();
 #endif
+
+			MobileCenter.Configure("79f00838-aa28-408e-9eb5-c99b824127d1");
 
 			LoadApplication(new App());
 

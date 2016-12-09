@@ -7,6 +7,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Microsoft.Azure.Mobile;
 
 namespace MobileCenterDemo.Droid
 {
@@ -21,6 +22,8 @@ namespace MobileCenterDemo.Droid
 			base.OnCreate(bundle);
 
 			global::Xamarin.Forms.Forms.Init(this, bundle);
+
+			MobileCenter.Configure("26c73ae6-ceaf-4464-9225-c5127b1b96f5");
 
 			LoadApplication(new App());
 		}

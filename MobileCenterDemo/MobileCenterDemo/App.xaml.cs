@@ -1,4 +1,7 @@
 ﻿using Xamarin.Forms;
+using Microsoft.Azure.Mobile;
+using Microsoft.Azure.Mobile.Analytics;
+using Microsoft.Azure.Mobile.Crashes;
 
 namespace MobileCenterDemo
 {
@@ -7,6 +10,8 @@ namespace MobileCenterDemo
 		public App()
 		{
 			InitializeComponent();
+
+			MobileCenter.Start(typeof(Analytics), typeof(Crashes));
 
 			MainPage = new NavigationPage(new MobileCenterDemoPage());
 		}
