@@ -28,8 +28,14 @@ namespace MobileCenterDemo.UITests
 		[Test]
 		public void WelcomeTextIsDisplayed()
 		{
-			AppResult[] results = app.WaitForElement(c => c.Marked("Welcome to Xamarin Forms!"));
-			app.Screenshot("Welcome screen.");
+			
+			app.WaitForElement(c => c.Id("myButton"));
+
+			app.Screenshot("First Screen");
+
+			app.Tap(x => x.Id("myButton"));
+
+			AppResult[] results = app.WaitForElement(x => x.Text("Hello, Mobile Center!"));
 
 			Assert.IsTrue(results.Any());
 		}

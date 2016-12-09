@@ -8,6 +8,8 @@ namespace MobileCenterDemo
 		{
 			InitializeComponent();
 
+			Title = "Mobile Center Demo";
+
 			myButton.Clicked += async (object sender, System.EventArgs e) =>
 			{
 				myLabel.Text = "Hello, Mobile Center!";
