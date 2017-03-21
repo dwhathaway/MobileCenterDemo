@@ -12,7 +12,7 @@ namespace MobileCenterDemo.UITests
 		{
 			if (platform == Platform.Android)
 			{
-				return ConfigureApp.Android.ApkFile("").StartApp();
+				return ConfigureApp.Android.ApkFile("../../../../MobileCenterDemo/Droid/bin/debug/com.xamarin.mobilecenterdemo.apk").StartApp();
 			}
 
 			return ConfigureApp.iOS.StartApp();

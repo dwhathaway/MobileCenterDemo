@@ -8,6 +8,8 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Microsoft.Azure.Mobile;
+using Microsoft.Azure.Mobile.Analytics;
+using Microsoft.Azure.Mobile.Crashes;
 
 namespace MobileCenterDemo.Droid
 {
@@ -23,7 +25,8 @@ namespace MobileCenterDemo.Droid
 
 			global::Xamarin.Forms.Forms.Init(this, bundle);
 
-			MobileCenter.Configure("26c73ae6-ceaf-4464-9225-c5127b1b96f5");
+			MobileCenter.Start("26c73ae6-ceaf-4464-9225-c5127b1b96f5",
+				   typeof(Analytics), typeof(Crashes));
 
 			LoadApplication(new App());
 		}

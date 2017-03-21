@@ -26,16 +26,21 @@ namespace MobileCenterDemo.UITests
 		}
 
 		[Test]
+		public void Repl()
+		{
+			app.Repl();
+		}
+
+		[Test]
 		public void WelcomeTextIsDisplayed()
 		{
-			
-			app.WaitForElement(c => c.Id("myButton"));
+			app.WaitForElement(c => c.Marked("myButton"));
 
 			app.Screenshot("First Screen");
 
-			app.Tap(x => x.Id("myButton"));
+			app.Tap(x => x.Marked("myButton"));
 
-			AppResult[] results = app.WaitForElement(x => x.Text("Hello, Mobile Center!"));
+			AppResult[] results = app.WaitForElement(x => x.Marked("Hello, Mobile Center!"));
 
 			Assert.IsTrue(results.Any());
 		}

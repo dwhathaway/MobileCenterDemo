@@ -4,6 +4,8 @@ using System.Linq;
 
 using Foundation;
 using Microsoft.Azure.Mobile;
+using Microsoft.Azure.Mobile.Analytics;
+using Microsoft.Azure.Mobile.Crashes;
 using UIKit;
 
 namespace MobileCenterDemo.iOS
@@ -20,7 +22,8 @@ namespace MobileCenterDemo.iOS
 			Xamarin.Calabash.Start();
 #endif
 
-			MobileCenter.Configure("79f00838-aa28-408e-9eb5-c99b824127d1");
+			MobileCenter.Start("79f00838-aa28-408e-9eb5-c99b824127d1",
+				   typeof(Analytics), typeof(Crashes));
 
 			LoadApplication(new App());
 
